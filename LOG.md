@@ -7,7 +7,7 @@ Hi, here is the log of the development, here you can find ideas before they will
 
 Plan for the session:
  - add empty Rails - Done
- - Add docker image, add instructions how to run
+ - Add docker image, add instructions how to run - Done
  - Add tests on crawler-1
  - Add crawler-1 implementation
  - Add worker to update
