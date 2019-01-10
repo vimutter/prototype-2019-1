@@ -1,6 +1,7 @@
 module Prototype::Crawlers
 end
 
+require_relative 'crawlers/base'
 require_relative 'crawlers/one'
 require_relative 'crawlers/two'
 

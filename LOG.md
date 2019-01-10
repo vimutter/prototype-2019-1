@@ -13,6 +13,6 @@ Plan for the session:
  - Add worker to update Done
  - Add simple results page Done
  - Add filtration on the page Done
- - Add crawler-2 tests
- - Add crawler-2 implementation
+ - Add crawler-2 tests Done
+ - Add crawler-2 implementation Done
 

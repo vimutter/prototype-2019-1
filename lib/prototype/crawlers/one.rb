@@ -1,18 +1,14 @@
 # frozen_string_literal: true
+
 require 'nokogiri'
 require 'open-uri'
 
-class Prototype::Crawlers::One
+class Prototype::Crawlers::One < Prototype::Crawlers::Base
   DEFAULT_URL = 'https://www.co-berlin.org/en/calender'
   TYPE = 'one'
 
-  def self.call
-    # Fetch and parse HTML document
-    doc = Nokogiri::HTML(open(url))
-
-    doc.css('.seite-c-single').each do |link|
-      process_event link
-    end
+  def self.row_selector
+    '.seite-c-single'
   end
 
   def self.process_event(section)

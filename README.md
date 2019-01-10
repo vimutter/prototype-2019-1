@@ -33,5 +33,3 @@ In order to run tests, execute following command:
 2. Run image with port forwarding:
 `docker run -p 3000:3000 -d prototype`
 3. Open browser at `localhost:3000`
-
-

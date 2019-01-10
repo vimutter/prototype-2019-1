@@ -2,7 +2,7 @@
 require 'nokogiri'
 require 'open-uri'
 
-class Prototype::Crawlers::Two
+class Prototype::Crawlers::Two < Prototype::Crawlers::Base
   DEFAULT_URL = 'https://gorki.de/en/programme/%{year}/%{month}/all'
   TYPE = 'two'
 
