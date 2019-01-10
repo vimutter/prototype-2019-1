@@ -6,6 +6,13 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+module Prototype
+end
+# For the sake of shortness, this one is explicitly required everywhere,
+# usually would be required only in workers
+require_relative '../lib/prototype/crawlers'
+require_relative '../lib/prototype/crawlers/one'
+
 module Prototype20191
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

@@ -1,0 +1,2 @@
+module Prototype::Crawlers
+end
