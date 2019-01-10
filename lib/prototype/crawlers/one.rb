@@ -4,6 +4,7 @@ require 'open-uri'
 
 class Prototype::Crawlers::One
   DEFAULT_URL = 'https://www.co-berlin.org/en/calender'
+  TYPE = 'one'
 
   def self.call
     # Fetch and parse HTML document
@@ -16,12 +17,13 @@ class Prototype::Crawlers::One
 
   def self.process_event(section)
     id = section.css(' > a')[0]&.attribute('href').content
-    event = Event.find_by(source_id: id)
+    event = Event.find_by(source_id: id, source_type: TYPE)
     unless event
       event = Event.create! dates(section).merge(title: section.css('.article-title')[0]&.content,
         description: section.css('.article-text')[0]&.content,
         source_id: id,
-        link: "#{url}/#{section.css('a')[0]&.attribute('href').content}"
+        link: "#{url}/#{section.css('a')[0]&.attribute('href').content}",
+        source_type: TYPE
       )
     end
     event

@@ -11,7 +11,6 @@ end
 # For the sake of shortness, this one is explicitly required everywhere,
 # usually would be required only in workers
 require_relative '../lib/prototype/crawlers'
-require_relative '../lib/prototype/crawlers/one'
 
 module Prototype20191
   class Application < Rails::Application
