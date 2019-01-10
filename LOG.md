@@ -10,9 +10,9 @@ Plan for the session:
  - Add docker image, add instructions how to run - Done
  - Add tests on crawler-1 Done
  - Add crawler-1 implementation Done
- - Add worker to update
- - Add simple results page
- - Add filtration on the page
+ - Add worker to update Done
+ - Add simple results page Done
+ - Add filtration on the page Done
  - Add crawler-2 tests
  - Add crawler-2 implementation
 

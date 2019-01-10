@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-bundle ex rails s
+whenever --update-crontab && bundle ex rails s

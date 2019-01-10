@@ -1,0 +1,18 @@
+<h1>Events</h1>
+
+<%= search_form_for @q do |f| %>
+
+
+  <%= f.label :title_cont %>
+  <%= f.search_field :title_cont %>
+
+
+  <%= f.label :date_lt %>
+  <%= f.search_field :date_lt %>
+
+  <%= f.submit %>
+<% end %>
+
+<% @events.each do |event| %>
+  <%= render 'event', event: event %>
+<% end %>

@@ -21,7 +21,7 @@ class Prototype::Crawlers::One
       event = Event.create! dates(section).merge(title: section.css('.article-title')[0]&.content,
         description: section.css('.article-text')[0]&.content,
         source_id: id,
-        link: section.css('a')[0]&.attribute('href').content
+        link: "#{url}/#{section.css('a')[0]&.attribute('href').content}"
       )
     end
     event
